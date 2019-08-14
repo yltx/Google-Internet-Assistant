@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "lib/sea.js", "bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "zh_CN"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "lib/jquery.min.js", "straightGoogle.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+   "default_locale": "zh_CN",
+   "description": "最简单易用的谷歌访问助手,google访问助手为chrome扩展用户量身打造。轻松访问谷歌google搜索，gmail邮箱，google+等谷歌服务。",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqZKA/FvgSisetPJhBa1B5yAVThl10CIh2/ecvka429zCQLB+Tz5WiCDmpaL3sFTOsyEhknohQ7kNJaUBdKpvsAggpRMY+hhqO7g3DURzrXRKnt3KiVURRCUG/Irnn2yhSHOTC7Vmm/k5mUSnyWhOCszqA54TQ9qtqiLcT9l75E0nnyi9m+EuY6qrI+lOaRvSf8q5D8mmHPYAFSUYme+rP/ZdA6aJH7VtJm6zONR0IvE6DLeJGH1/UqgAiPeqIu5dB3vpzGNkTQS2VLAtG+7iSmxsJpUciNw3TxoUBxbm/1Bw2GkK45AaKT/htMbjINWclTHl/xeAabi8e2zgXOObJwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "18.0.0",
+   "name": "谷歌上网助手",
+   "options_page": "options.html",
+   "permissions": [ "proxy", "tabs", "contextMenus", "webRequest", "webRequestBlocking", "webNavigation", "unlimitedStorage", "notifications", "\u003Call_urls>", "http://*/*", "https://*/*", "ftp://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.7.2",
+   "web_accessible_resources": [ "first.html" ]
+}
